@@ -3,7 +3,9 @@ import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
 
-
+#https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.spectrogram.html
+#https://en.wikipedia.org/wiki/WAV
+#https://docs.python.org/3/library/wave.html
 
 def getfilepath():
     return input("specify file path to wav file")
