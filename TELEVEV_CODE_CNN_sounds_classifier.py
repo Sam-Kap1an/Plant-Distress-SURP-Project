@@ -3,7 +3,6 @@ from sklearn.utils import class_weight
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Flatten, Convolution1D, Dropout, MaxPooling1D
 
-
 #%%
 def train_model(X_train, Y_train, vb=0):
 
