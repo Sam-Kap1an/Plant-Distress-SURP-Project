@@ -14,7 +14,6 @@ sound2 = AudioSegment.from_file(getfilepath())
 
 played_together = sound1.overlay(sound2)
 
-
 output_file = "output.wav"
 
 played_together.export(output_file, format="wav")

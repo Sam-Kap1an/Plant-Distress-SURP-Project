@@ -3,6 +3,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
+import librosa
 
 
 #C:/Users/sfkap/Code/research/Tobacco Cut/
@@ -17,11 +18,11 @@ def getfilepath():
 
 dir = getfilepath()
 files = os.listdir(dir)
-count =0
+count = 0
 for file in files:
     if count<max_files:
         # Load the WAV file
-        sample_rate, data = wavfile.read(str(dir)+str(file))
+        sample_rate, data = wavfile.read(str(dir)+"/"+str(file))
 
 
         time = np.linspace(0, len(data) / sample_rate, num=len(data))
@@ -34,8 +35,10 @@ for file in files:
         axes[count].set_ylabel('Amplitude')
         axes[count].grid(True)
         count +=1
+        
     else:
         break
-    
+
+
 plt.tight_layout()
 plt.show()
